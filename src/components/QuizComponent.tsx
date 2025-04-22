@@ -41,8 +41,8 @@ const QuizComponent: React.FC = () => {
       <h1>{currentQuiz.category}</h1>
       <p>{currentQuiz.question}</p>
       <ol type="A">
-        {currentQuiz.incorrect_answers
-          .concat(currentQuiz.correct_answer)
+        {[...currentQuiz.incorrect_answers, currentQuiz.correct_answer]
+          .sort(() => Math.random() - 0.5)
           .map((answer, index) => (
             <li
               key={index}

@@ -40,12 +40,13 @@ const Questions = () => {
     setSelectedAnswer(answer);
     setIsAnswered(true); // Prevent multiple clicks
   };
+
   return (
     <div>
       <h2>{CurrentQuiz.question}</h2>
       <ol type="A">
-        {CurrentQuiz.incorrect_answers
-          .concat(CurrentQuiz.correct_answer)
+        {[...CurrentQuiz.incorrect_answers, CurrentQuiz.correct_answer]
+          .sort(() => Math.random() - 0.5) // randomize the order of answers
           .map((answer, index) => (
             <li
               key={index}
