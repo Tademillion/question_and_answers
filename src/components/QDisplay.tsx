@@ -13,7 +13,6 @@ const QDisplay = () => {
   const handleAnswerClick = (index: number) => {
     setSelectedAnswer(index);
   };
-
   return (
     <div>
       {questions.results.map((question, index) => (

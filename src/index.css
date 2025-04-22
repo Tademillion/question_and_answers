@@ -43,3 +43,11 @@
         font-size: 16px;
         margin: 10px;
     }
+.correct{
+    background-color: green;
+    color: white;
+}
+    .incorrect{
+        background-color: red;
+        color: white;
+    }
