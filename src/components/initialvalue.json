@@ -1,0 +1,85 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "question": "In Ms. Kobayashi&#039;s Dragon Maid, who is Kobayashi&#039;s maid?",
+      "correct_answer": "Tohru",
+      "incorrect_answers": ["Lucoa", "Kanna", "Elma"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Which Aerosmith album featured &quot;Walk This Way&quot;?",
+      "correct_answer": "Toys in the Attic",
+      "incorrect_answers": ["Rocks", "Get Your Wings", "Draw the Line"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "In the video game &quot;Pizza Tower&quot;, what is the protagonist&#039;s name?",
+      "correct_answer": "Peppino",
+      "incorrect_answers": ["Pastachio", "Pepper", "Spinachio"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Television",
+      "question": "Who was the winner of &quot;Big Brother&quot; Season 10?",
+      "correct_answer": "Dan Gheesling",
+      "incorrect_answers": ["Bryce Kranyik", "Ryan Sutfin", "Chris Mundorf"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Science: Computers",
+      "question": "Lenovo acquired IBM&#039;s personal computer division, including the ThinkPad line of laptops and tablets, in what year?",
+      "correct_answer": "2005",
+      "incorrect_answers": ["1999", "2002", "2008"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Books",
+      "question": "Which novel by John Grisham was conceived on a road trip to Florida while thinking about stolen books with his wife?",
+      "correct_answer": "Camino Island",
+      "incorrect_answers": ["Rogue Lawyer", "Gray Mountain", "The Litigators"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Music",
+      "question": "Grand Theft Autumn/Where Is Your Boy is a song by which band?",
+      "correct_answer": "Fall Out Boy",
+      "incorrect_answers": ["Panic! At The Disco", "Paramore", "Blink-182"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "What year was Super Mario Bros. released?",
+      "correct_answer": "1985",
+      "incorrect_answers": ["1983", "1987", "1986"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Which country does the band Rammstein hail from?",
+      "correct_answer": "Germany",
+      "incorrect_answers": ["Austria", "Armenia", "Belgium"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "The names of Tom Nook&#039;s cousins in the Animal Crossing franchise are named &quot;Timmy&quot; and &quot;Jimmy&quot;.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    }
+  ]
+}

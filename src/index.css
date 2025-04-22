@@ -1,0 +1,45 @@
+
+    .question-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-bottom: 8px;
+    }
+    p {
+      margin: 4px 0;
+    }
+    
+    .answer-list-item{
+        padding: 10px;
+        background-color: #e9ecef;
+        margin: 4px;
+        border: 1px solid gray;
+    }
+    .next-btn{
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .selected{
+        background-color: red;
+        color: white;
+    }
+    .btn-action{
+        background-color: #28a745;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+    }
