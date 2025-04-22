@@ -41,6 +41,12 @@ const Questions = () => {
     setIsAnswered(true); // Prevent multiple clicks
   };
 
+  const distinctDifficulty = [
+    ...new Set(questions.results.map((question) => question.difficulty)),
+  ];
+  const distinctCategory = [
+    ...new Set(questions.results.map((question) => question.category)),
+  ];
   return (
     <div>
       <div className="quiz-header">
@@ -54,11 +60,11 @@ const Questions = () => {
         </button>
         <div className="filter_bysection">
           <select className="quiz-select">
-            {questions.results.map((question, index) => (
+            {distinctCategory.map((question, index) => (
               <>
                 <option value=""> Category</option>
                 <option key={index} value={index} className="quiz-option">
-                  {question.category}
+                  {question}
                 </option>
               </>
             ))}
@@ -66,9 +72,13 @@ const Questions = () => {
 
           <select id="difficulty" className="quiz-select">
             <option value="">Difficulty</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
+            {distinctDifficulty.map((question, index) => (
+              <>
+                <option key={index} value={index} className="quiz-option">
+                  {question}
+                </option>
+              </>
+            ))}
           </select>
 
           <select id="difficulty" className="quiz-select">
