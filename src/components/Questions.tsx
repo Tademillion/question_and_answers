@@ -11,18 +11,24 @@ const Questions = () => {
   const CurrentQuiz = questions.results[currentQuestion];
 
   const handleNextClick = () => {
-    if (!isAnswered) {
-      return alert("Please select an answer before proceeding.");
-    }
+    if (!isAnswered) return;
+    console.log("Current Question", currentQuestion);
+    setIsAnswered(false);
     if (currentQuestion < questions.results.length) {
       setCurrentQuestion(currentQuestion + 1);
     }
+    resizeTo();
   };
   const handlePreviousClick = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1);
     }
+    resizeTo();
   };
+  function resizeTo() {
+    setSelectedAnswer(null);
+    setAnswerStatus("");
+  }
   const HandleSelectedAnswer = (answer: string) => {
     if (isAnswered) return; // Prevent multiple clicks
     if (answer === CurrentQuiz.correct_answer) {
@@ -30,6 +36,7 @@ const Questions = () => {
     } else {
       setAnswerStatus("incorrect");
     }
+    console.log("current index is", currentQuestion);
     setSelectedAnswer(answer);
     setIsAnswered(true); // Prevent multiple clicks
   };
@@ -57,18 +64,25 @@ const Questions = () => {
                }`}
               onClick={() => {
                 HandleSelectedAnswer(answer);
-                console.log("selected answer is", answer);
               }}
             >
               {answer}
             </li>
           ))}
       </ol>
-      <button className="btn-action next" onClick={handlePreviousClick}>
+      <button
+        className="btn-action next"
+        onClick={handlePreviousClick}
+        disabled={currentQuestion === 0}
+      >
         {" "}
         Previous
       </button>
-      <button className="btn-action next" onClick={handleNextClick}>
+      <button
+        className="btn-action next"
+        onClick={handleNextClick}
+        disabled={currentQuestion === questions.results.length - 1}
+      >
         Next
       </button>
     </div>
