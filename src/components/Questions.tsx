@@ -43,6 +43,41 @@ const Questions = () => {
 
   return (
     <div>
+      <div className="quiz-header">
+        <h2>Take Full Quiz</h2>
+        <p className="second-header">
+          select question based on following criteria
+        </p>
+        <button type="button" className="refresh">
+          {" "}
+          refresh
+        </button>
+        <div className="filter_bysection">
+          <select className="quiz-select">
+            {questions.results.map((question, index) => (
+              <>
+                <option value=""> Category</option>
+                <option key={index} value={index} className="quiz-option">
+                  {question.category}
+                </option>
+              </>
+            ))}
+          </select>
+
+          <select id="difficulty" className="quiz-select">
+            <option value="">Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+
+          <select id="difficulty" className="quiz-select">
+            <option value="">Type</option>
+            <option value="easy">Multiple</option>
+            <option value="medium">True/False</option>
+          </select>
+        </div>
+      </div>
       <h2>{CurrentQuiz.question}</h2>
       <ol type="A">
         {[...CurrentQuiz.incorrect_answers, CurrentQuiz.correct_answer]
